@@ -2,12 +2,19 @@
 """This module defines a base class for all models"""
 import uuid
 from datetime import datetime
+import models
+
 
 class BaseModel:
     """Class that defines common attrinutes and methods"""
 
     def __init__(self, *args, **kwargs):
-        """Initializes the BaseModel instance with a unique ID and timestamps"""
+        """Initializes the BaseModel instance with a unique ID and timestamps
+
+        Args:
+            *arg (any): unused
+            **kwargs (dict): key/value
+        """
         if kwargs:
             for key, value in kwargs.items():
                 if key != '__class__':
@@ -26,6 +33,7 @@ class BaseModel:
     def save(self):
         """Update the public instance attribute 'updated_at' with the current datetime"""
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Return a dict contaning all keys/values of the instance"""
