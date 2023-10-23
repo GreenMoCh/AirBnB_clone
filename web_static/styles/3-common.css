@@ -5,10 +5,3 @@ body {
     font-size: 14px;
     color: #484848;
 }
-
-header, footer {
-    width: 100%;
-    border-color: #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-}
