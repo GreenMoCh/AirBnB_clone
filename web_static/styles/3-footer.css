@@ -2,9 +2,14 @@ footer {
     background-color: white;
     height: 60px;
     width: 100%;
-    text-align: center;
-    vertical-align: middle;
+    border-top: 1px #CCCCCC solid;
     position: absolute;
-    border-top: 1px #CCCCCC;
     bottom: 0;
+    left: 0;
+}
+
+.text {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
 }

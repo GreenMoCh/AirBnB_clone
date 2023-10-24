@@ -1,5 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    position: relative;
+}
+
+main {
+    min-height: calc(100vh - 130px);
 }
